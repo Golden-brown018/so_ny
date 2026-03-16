@@ -1,0 +1,9 @@
+import pandas as pd
+
+try:
+    data = pd.read_csv("data.csv")
+    data.to_excel("output.xlsx", index=False)
+    print("CSV successfully converted to Excel!")
+
+except FileNotFoundError:
+    print("Error: data.csv file not found.")
